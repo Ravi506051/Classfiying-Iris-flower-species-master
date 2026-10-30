@@ -34,3 +34,13 @@ To build a Machine Learning model that accurately predicts the species of an Iri
 **Ravi Kumar Rao**
 
 GitHub: https://github.com/Ravi506051
+
+## Validation Checklist
+
+- Confirm the four input measurements use the same units and feature order as the training data.
+- Evaluate the classifier on held-out samples and inspect a confusion matrix to see which species are most often confused.
+- Try a few plausible measurements and check that predictions are consistent with the model's learned feature ranges.
+
+## Reproducibility
+
+Record the train/test split, random seed, selected algorithm, and evaluation metrics when comparing experiments. Add numerical results only after running the notebook.
