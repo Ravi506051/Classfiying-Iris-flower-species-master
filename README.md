@@ -50,3 +50,9 @@ Record the train/test split, random seed, selected algorithm, and evaluation met
 Record the random seed, split strategy, and per-class precision/recall. Add a confusion matrix and validate that prediction inputs follow the training feature order.
 
 For reproducible updates, record the dataset/source version, environment and dependency versions, preprocessing choices, and actual outputs from each run. Keep sample values clearly labelled and do not publish secrets or private data.
+
+### Technical Deep Dive
+
+The four input features must be passed to the model in the same order and units used during training: sepal length, sepal width, petal length, and petal width. Compare a simple Logistic Regression or K-Nearest Neighbors baseline with a tree-based classifier, using a stratified train/test split because the target is multiclass.
+
+Suggested engineering checks: report per-class precision and recall, inspect the confusion matrix, persist preprocessing together with the estimator, and validate that prediction inputs contain exactly four finite numeric measurements.
