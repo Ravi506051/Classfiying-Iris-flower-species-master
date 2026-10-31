@@ -56,3 +56,11 @@ For reproducible updates, record the dataset/source version, environment and dep
 The four input features must be passed to the model in the same order and units used during training: sepal length, sepal width, petal length, and petal width. Compare a simple Logistic Regression or K-Nearest Neighbors baseline with a tree-based classifier, using a stratified train/test split because the target is multiclass.
 
 Suggested engineering checks: report per-class precision and recall, inspect the confusion matrix, persist preprocessing together with the estimator, and validate that prediction inputs contain exactly four finite numeric measurements.
+
+## Validation and Reproducibility
+
+- Preserve the feature order used during training: sepal length, sepal width, petal length, and petal width.
+- Use a stratified train/test split and report per-class precision, recall, F1-score, and a confusion matrix.
+- Compare a simple baseline (such as Logistic Regression or K-Nearest Neighbors) with a tree-based classifier.
+- Persist preprocessing together with the estimator and validate that prediction inputs contain exactly four finite numeric measurements.
+- Record the random seed, split strategy, and actual metrics from the notebook; avoid unverified performance claims.
