@@ -64,3 +64,11 @@ Suggested engineering checks: report per-class precision and recall, inspect the
 - Compare a simple baseline (such as Logistic Regression or K-Nearest Neighbors) with a tree-based classifier.
 - Persist preprocessing together with the estimator and validate that prediction inputs contain exactly four finite numeric measurements.
 - Record the random seed, split strategy, and actual metrics from the notebook; avoid unverified performance claims.
+
+## Machine Learning Workflow
+
+- Treat species prediction as a multiclass classification task using sepal and petal measurements.
+- Inspect feature distributions and class balance before fitting a classifier.
+- Use a stratified train/test split and fit scaling or preprocessing only on the training data.
+- Evaluate with accuracy, per-class precision and recall, a classification report, and a confusion matrix.
+- Visualize decision boundaries only when using a compatible two-feature view, and explain that such plots simplify the full feature space.
