@@ -72,3 +72,10 @@ Suggested engineering checks: report per-class precision and recall, inspect the
 - Use a stratified train/test split and fit scaling or preprocessing only on the training data.
 - Evaluate with accuracy, per-class precision and recall, a classification report, and a confusion matrix.
 - Visualize decision boundaries only when using a compatible two-feature view, and explain that such plots simplify the full feature space.
+
+## Further Model Verification
+
+- Preserve the training feature order: sepal length, sepal width, petal length, and petal width.
+- Use a stratified split and report per-class precision, recall, F1-score, and a confusion matrix.
+- Validate that prediction inputs contain exactly four finite numeric values.
+- Persist preprocessing and the estimator together, and record the random seed and measured results.
