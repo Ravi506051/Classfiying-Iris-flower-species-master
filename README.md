@@ -1,81 +1,39 @@
-# 🌸 Iris Flower Species Classification
+# Iris Flower Species Classification
 
-A Machine Learning project that classifies Iris flowers into three species: Setosa, Versicolor, and Virginica based on sepal and petal measurements.
+A supervised machine-learning project that classifies Iris flowers into Setosa, Versicolor or Virginica using four measurements.
 
-## 🛠️ Technologies Used
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Jupyter Notebook
+## Input features
+- Sepal length
+- Sepal width
+- Petal length
+- Petal width
 
-## 📊 Dataset
-The project uses the famous Iris dataset containing:
-- Sepal Length
-- Sepal Width
-- Petal Length
-- Petal Width
+## Workflow
+1. Load and inspect the Iris dataset.
+2. Explore feature distributions and class balance.
+3. Prepare a stratified train/test split.
+4. Train a classification model.
+5. Evaluate predictions with a classification report and confusion matrix.
+6. Test predictions using four numeric measurements in the training feature order.
 
-## 🤖 Machine Learning
-The project includes:
-- Data Preprocessing
-- Exploratory Data Analysis
-- Model Training
-- Classification
-- Model Evaluation
-- Prediction
+## Technology
+Python · Pandas · NumPy · Matplotlib · Seaborn · Scikit-learn · Jupyter Notebook
 
-## 🎯 Objective
-To build a Machine Learning model that accurately predicts the species of an Iris flower from its physical measurements.
+## Run
+```bash
+git clone https://github.com/Ravi506051/Classfiying-Iris-flower-species-master.git
+cd Classfiying-Iris-flower-species-master
+python -m venv .venv
+# Windows: .venv\\Scripts\\activate
+pip install numpy pandas matplotlib seaborn scikit-learn jupyter
+jupyter notebook
+```
 
-## 👨‍💻 Author
-**Ravi Kumar Rao**
+## Evaluation
+Use a stratified split and report per-class precision, recall and F1-score alongside accuracy. Record the random seed and measured results; do not publish unverified performance claims.
 
-GitHub: https://github.com/Ravi506051
+## Future improvements
+Compare Logistic Regression, K-Nearest Neighbours and tree-based baselines. Persist preprocessing with the estimator and validate that inputs contain exactly four finite numeric values.
 
-## Validation Checklist
-
-- Confirm the four input measurements use the same units and feature order as the training data.
-- Evaluate the classifier on held-out samples and inspect a confusion matrix to see which species are most often confused.
-- Try a few plausible measurements and check that predictions are consistent with the model's learned feature ranges.
-
-## Reproducibility
-
-Record the train/test split, random seed, selected algorithm, and evaluation metrics when comparing experiments. Add numerical results only after running the notebook.
-
-## Project Development Notes
-
-Record the random seed, split strategy, and per-class precision/recall. Add a confusion matrix and validate that prediction inputs follow the training feature order.
-
-For reproducible updates, record the dataset/source version, environment and dependency versions, preprocessing choices, and actual outputs from each run. Keep sample values clearly labelled and do not publish secrets or private data.
-
-### Technical Deep Dive
-
-The four input features must be passed to the model in the same order and units used during training: sepal length, sepal width, petal length, and petal width. Compare a simple Logistic Regression or K-Nearest Neighbors baseline with a tree-based classifier, using a stratified train/test split because the target is multiclass.
-
-Suggested engineering checks: report per-class precision and recall, inspect the confusion matrix, persist preprocessing together with the estimator, and validate that prediction inputs contain exactly four finite numeric measurements.
-
-## Validation and Reproducibility
-
-- Preserve the feature order used during training: sepal length, sepal width, petal length, and petal width.
-- Use a stratified train/test split and report per-class precision, recall, F1-score, and a confusion matrix.
-- Compare a simple baseline (such as Logistic Regression or K-Nearest Neighbors) with a tree-based classifier.
-- Persist preprocessing together with the estimator and validate that prediction inputs contain exactly four finite numeric measurements.
-- Record the random seed, split strategy, and actual metrics from the notebook; avoid unverified performance claims.
-
-## Machine Learning Workflow
-
-- Treat species prediction as a multiclass classification task using sepal and petal measurements.
-- Inspect feature distributions and class balance before fitting a classifier.
-- Use a stratified train/test split and fit scaling or preprocessing only on the training data.
-- Evaluate with accuracy, per-class precision and recall, a classification report, and a confusion matrix.
-- Visualize decision boundaries only when using a compatible two-feature view, and explain that such plots simplify the full feature space.
-
-## Further Model Verification
-
-- Preserve the training feature order: sepal length, sepal width, petal length, and petal width.
-- Use a stratified split and report per-class precision, recall, F1-score, and a confusion matrix.
-- Validate that prediction inputs contain exactly four finite numeric values.
-- Persist preprocessing and the estimator together, and record the random seed and measured results.
+## Maintainer
+**Ravi Kumar Rao** · [GitHub](https://github.com/Ravi506051)
