@@ -49,3 +49,10 @@ Compare Logistic Regression, K-Nearest Neighbours and tree-based baselines. Pers
 ## Portfolio Context
 
 This project is part of my hands-on learning portfolio. The repository documents the workflow and implementation; results should be reproduced from the included code and data before being used in reports or professional claims.
+
+## Evaluation and Reproducibility
+
+- Preserve a held-out test set and use a stratified split to retain class proportions.
+- Review the confusion matrix and per-class precision, recall, and F1-score.
+- Visualize feature relationships to understand where species overlap.
+- Record the dataset source, preprocessing choices, and model settings for repeatable experiments.
